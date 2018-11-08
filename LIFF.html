@@ -6,6 +6,7 @@
     <title>Insert title here</title>
     <script type="text/javascript" src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script type="text/javascript">
+        try {
         var url_string = location.href;
         var url = new URL(url_string);
         var s = location.search;
@@ -34,6 +35,9 @@
         }
         
         liff.init(init, initerr);
+        } catch(e) {
+            alert(e);
+        }
     </script>
 </head>
 
