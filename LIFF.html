@@ -32,67 +32,8 @@
                 external: false
             })
         }
-
-        // window.onload = function () {
-
-        //     var init = function (data) {
-
-        //         var type = document.getElementById('type');
-        //         var viewType = document.getElementById('viewType');
-        //         var userId = document.getElementById('userId');
-        //         var utouId = document.getElementById('utouId');
-        //         var roomId = document.getElementById('roomId');
-        //         var groupId = document.getElementById('groupId');
-        //         var _data = document.getElementById('data');
-
-        //         type.textContent = 'type:' + data.context.type;
-        //         viewType.textContent = 'viewType:' + data.context.viewType;
-        //         userId.textContent = 'userId:' + data.context.userId;
-        //         utouId.textContent = 'utouId:' + data.context.utouId;
-        //         roomId.textContent = 'roomId:' + data.context.roomId;
-        //         groupId.textContent = 'groupId:' + data.context.groupId;
-
-        //         _data.textContent = 'data:' + JSON.stringify(data);
-
-        //     };
-
-        //     var initerr = function (data) {
-        //         var _data = document.getElementById('data');
-        //         _data.textContent = 'data:' + JSON.stringify(data);
-        //     }
-
-        //     var expand = function (data) {
-        //         let toStr = "";
-        //         for (var name in data) {
-        //             toStr += name + ":" + obj[name] + ";";
-        //         }
-        //         return toStr;
-        //     }
-
-        //     liff.init(init, initerr);
-
-        //     setTimeout(function () {
-        //         var promise_userId = document.getElementById('promise_userId');
-        //         promise_userId.textContent = JSON.stringify(liff.getProfile());
-
-        //         var displayName = document.getElementById('displayName');
-        //         displayName.textContent = JSON.stringify(liff);
-        //     }, 3000)
-
-        //     // liff.getProfile().then(
-        //     //     profile => {
-        //     //         var promise_userId = document.getElementById('promise_userId');
-        //     //         var displayName = document.getElementById('displayName');
-        //     //         var pictureUrl = document.getElementById('pictureUrl');
-        //     //         var statusMessage = document.getElementById('statusMessage');
-
-        //     //         promise_userId.textContent = 'userId:' + profile.userId;
-        //     //         displayName.textContent = 'displayName:' + profile.displayName;
-        //     //         pictureUrl.textContent = 'pictureUrl:' + profile.pictureUrl;
-        //     //         statusMessage.textContent = 'statusMessage:' + profile.statusMessage;
-        //     //     }
-        //     // );
-        // }
+        
+        liff.init(init, initerr);
     </script>
 </head>
 
@@ -101,36 +42,6 @@
     <center>
         <img src="https://i.imgur.com/seuaOqf.gif?1" />
     </center>
-    <!-- <div>
-        <span>帳戶資訊</span>
-        <br>
-        <span id="type"></span>
-        <br>
-        <span id="viewType"></span>
-        <br>
-        <span id="userId"></span>
-        <br>
-        <span id="utouId"></span>
-        <br>
-        <span id="roomId"></span>
-        <br>
-        <span id="groupId"></span>
-        <br>
-        <span>用戶資訊</span>
-        <br>
-        <span id="promise_userId"></span>
-        <br>
-        <span id="displayName"></span>
-        <br>
-        <span id="pictureUrl"></span>
-        <br>
-        <span id="statusMessage"></span>
-        <br>
-        <span>data展開</span>
-        <br>
-        <span id="data"></span>
-        <br>
-    </div> -->
 </body>
 
 </html>
