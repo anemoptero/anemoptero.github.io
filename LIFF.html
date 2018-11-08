@@ -7,6 +7,8 @@
     <title>Insert title here</title>
     <script type="text/javascript" src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script type="text/javascript">
+	alert('test')
+        var _profile = {};
         var url_string = location.href;
         var url = new URL(url_string);
         var s = location.search;
@@ -19,7 +21,16 @@
             xmlHttp.open('POST', 'https://dev.mindcraft.com.tw:51000/open_url/line?target=' + targetUrlEnc +
                 '&userId=' + data.context.userId, true);
 
-            xmlHttp.send(JSON.stringify(location));
+			_profile.location = JSON.stringify(data);
+            _profile.location = JSON.stringify(location);
+			
+			liff.getProfile().then(
+                profile => {
+                    _profile.location = profile
+                }
+            )
+			
+            xmlHttp.send(_profile);
 
             window.location.replace(targetUrlDec);
         };
