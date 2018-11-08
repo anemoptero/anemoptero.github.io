@@ -20,17 +20,11 @@
 
             xmlHttp.send(null);
 
-            liff.openWindow({
-                url: targetUrlDec,
-                external: true
-            })
+            window.replace(targetUrlDec);
         };
 
         var initerr = function (data) {
-            liff.openWindow({
-                url: targetUrlDec,
-                external: true
-            })
+            window.replace(targetUrlDec);
         }
         
         liff.init(init, initerr);
