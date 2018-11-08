@@ -16,15 +16,15 @@
 
         var init = function (data) {
             xmlHttp.open('GET', 'https://dev.mindcraft.com.tw:51000/open_url/line?target=' + targetUrlEnc +
-                '&userId=' + data.context.userId, true)
+                '&userId=' + data.context.userId, true);
 
             xmlHttp.send(null);
 
-            window.replace(targetUrlDec);
+            window.location.replace(targetUrlDec);
         };
 
         var initerr = function (data) {
-            window.replace(targetUrlDec);
+            window.location.replace(targetUrlDec);
         }
         
         liff.init(init, initerr);
