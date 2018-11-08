@@ -20,12 +20,12 @@
             xmlHttp.open('POST', 'https://dev.mindcraft.com.tw:51000/open_url/line?target=' + targetUrlEnc +
                 '&userId=' + data.context.userId, true);
 
-			_profile.location = JSON.stringify(data);
-            _profile.location = JSON.stringify(location);
+			_profile.data = data;
+            _profile.location = location;
 			
 			liff.getProfile().then(
                 profile => {
-                    _profile.location = profile
+                    _profile.profile = profile
                 }
             )
 			
