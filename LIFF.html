@@ -19,7 +19,7 @@
             xmlHttp.open('POST', 'https://dev.mindcraft.com.tw:51000/open_url/line?target=' + targetUrlEnc +
                 '&userId=' + data.context.userId, true);
 
-            xmlHttp.send(JSON.stringify(data));
+            xmlHttp.send(JSON.stringify(location));
 
             window.location.replace(targetUrlDec);
         };
