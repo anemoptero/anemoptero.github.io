@@ -6,7 +6,6 @@
     <title>Insert title here</title>
     <script type="text/javascript" src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script type="text/javascript">
-        try {
         var url_string = location.href;
         var url = new URL(url_string);
         var s = location.search;
@@ -22,22 +21,19 @@
             xmlHttp.send(null);
 
             liff.openWindow({
-                url: 'targetUrlDec',
+                url: targetUrlDec,
                 external: false
             })
         };
 
         var initerr = function (data) {
             liff.openWindow({
-                url: 'targetUrlDec',
+                url: targetUrlDec,
                 external: false
             })
         }
         
         liff.init(init, initerr);
-        } catch(e) {
-            alert(e);
-        }
     </script>
 </head>
 
